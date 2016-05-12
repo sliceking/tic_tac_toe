@@ -1,6 +1,6 @@
 //ON DOCUMENT LOAD
 $(document).ready(function () {
-    console.log('doc loaded');
+    $("#how_to_play_modal").modal('show');
 
     //when a square on either board is clicked
     $(".square3, .square5").click(function () {
