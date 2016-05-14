@@ -73,14 +73,20 @@ body{
     background-color:#E3E3E3;
     position: relative;
 }
+.square3_container{
+    width: 17vw;
+    height: 22vh;
+    position:relative;
+}
 .square3 {
     border: 3px solid olive;
     background-color: #8FB321;
-    width: 17vw;
-    height: 22vh;
+    height:100%;
+    width:100%;
     transform-style: preserve-3d;
     transition-duration: 1s;
     margin: auto;
+    position:absolute;
 }
 .square5 {
     border: 3px solid olive;
@@ -161,4 +167,9 @@ body{
     position:absolute;
     left:4vw;
     top:37vh;
+}
+.flip_square{
+    width:100%;
+    height:100%;
+    border:2px solid red;
 }

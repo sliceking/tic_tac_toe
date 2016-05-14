@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     //when a square on either board is clicked
     $(".square3, .square5").click(function () {
+      
 
         //if clicked after game is won, reset the game
         if (won == 1) {
@@ -40,7 +41,7 @@ $(document).ready(function () {
         }// otherwise, anarchyMode is off and continue as normal
         else {
             //if square was already claimed,
-            if ($(this).hasClass('x') || $(this).hasClass('o')) {
+            if ($(this).find('.back').hasClass('x') || $(this).find('.back').hasClass('o')) {
                 $('.square_occupied').show( "drop", {direction: "right"});
                 setTimeout(function () {
                     $('.square_occupied').hide('drop',{direction:'right'});
@@ -49,7 +50,7 @@ $(document).ready(function () {
                 return;
             }
             console.log(this);
-            $(this).addClass(player);//mark the cell with the current player's mark
+            $(this).find('.back').addClass(player);//mark the cell with the current player's mark
             addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
             console.log("player:" + player);
         }
