@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#how_to_play_modal").modal('show');
 
     //when a square on either board is clicked
-    $(".square3, .square5").click(function () {
+    $(".square3_container, .square5").click(function () {
       
 
         //if clicked after game is won, reset the game
@@ -50,7 +50,8 @@ $(document).ready(function () {
                 return;
             }
             console.log(this);
-            $(this).find('.back').addClass(player);//mark the cell with the current player's mark
+            $(this).find('.back').addClass(player).addClass('back_flip');//mark the cell with the current player's mark
+            $(this).find('.front').addClass('front_flip');
             addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
             console.log("player:" + player);
         }

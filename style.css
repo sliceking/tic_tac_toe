@@ -116,21 +116,16 @@ body{
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-    transform:  rotate3D(0,1,0,180deg);
 }
-.x:hover {
-    border-radius:30%;
+.square3:hover{
+    background-color: #2ecc71;
 }
 .o{
     background-image: url("images/contra.png");
-    transform: rotate3D(0,1,0,180deg);
     background-size:contain;
     background-repeat: no-repeat;
 }
-.o:hover {
-    border-radius:30%;
 
-}
 .modal-header{
     border-bottom:none;
 }
@@ -168,8 +163,25 @@ body{
     left:4vw;
     top:37vh;
 }
-.flip_square{
-    width:100%;
-    height:100%;
-    border:2px solid red;
+
+.front{
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    transition: -webkit-transform .3s linear 0s;
+}
+.back{
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg);
+    transition: -webkit-transform .3s linear 0s;
+}
+.front_flip {
+    -webkit-transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(0deg);
+    backface-visibility: visible;
+}
+
+.back_flip {
+    -webkit-transform: perspective(600px) rotateY(-180deg);
+    transform: perspective(600px) rotateY(-180deg);
 }
