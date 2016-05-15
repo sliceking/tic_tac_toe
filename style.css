@@ -83,8 +83,8 @@ body{
     background-color: #8FB321;
     height:100%;
     width:100%;
-    transform-style: preserve-3d;
-    transition-duration: 1s;
+    #transform-style: preserve-3d;
+    #transition-duration: 1s;
     margin: auto;
     position:absolute;
 }
@@ -167,21 +167,15 @@ body{
 .front{
     -webkit-transform: perspective(600px) rotateY(180deg);
     transform: perspective(600px) rotateY(180deg);
-    backface-visibility: hidden;
     transition: -webkit-transform .3s linear 0s;
 }
 .back{
     -webkit-transform: perspective(600px) rotateY(180deg);
     transform: perspective(600px) rotateY(180deg);
     transition: -webkit-transform .3s linear 0s;
+    backface-visibility: hidden;
 }
-.front_flip {
+.flip {
     -webkit-transform: perspective(600px) rotateY(0deg);
     transform: perspective(600px) rotateY(0deg);
-    backface-visibility: visible;
-}
-
-.back_flip {
-    -webkit-transform: perspective(600px) rotateY(-180deg);
-    transform: perspective(600px) rotateY(-180deg);
 }

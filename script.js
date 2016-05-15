@@ -50,8 +50,8 @@ $(document).ready(function () {
                 return;
             }
             console.log(this);
-            $(this).find('.back').addClass(player).addClass('back_flip');//mark the cell with the current player's mark
-            $(this).find('.front').addClass('front_flip');
+            $(this).find('.back').addClass(player).addClass('flip');//mark the cell with the current player's mark
+            $(this).find('.front').addClass('flip');
             addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
             console.log("player:" + player);
         }
@@ -408,7 +408,7 @@ function square_clicked(a){
 //this is the reset function that resets the x and o classes and resets the gameArea Array
 function reset(){
     console.log('reset recieved');
-    $('.square3, .square5').removeClass('x o');
+    $('.square3, .square5').removeClass('x o flip');
     if(gameAreaSize == 3){
         gameArea = [
             ['1', '2', '3'],
