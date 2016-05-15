@@ -26,10 +26,10 @@
     left: 46vw;
     z-index: 1;
 }
-.game_board3{
-    position: relative;
-    top: 1%;
-}
+/*.game_board3{*/
+    /*position: relative;*/
+    /*top: 1%;*/
+/*}*/
 h1{
     font-size:2vw;
 }
@@ -77,14 +77,13 @@ body{
     width: 17vw;
     height: 22vh;
     position:relative;
+    padding:0;
 }
 .square3 {
     border: 3px solid olive;
     background-color: #8FB321;
     height:100%;
     width:100%;
-    #transform-style: preserve-3d;
-    #transition-duration: 1s;
     margin: auto;
     position:absolute;
 }
